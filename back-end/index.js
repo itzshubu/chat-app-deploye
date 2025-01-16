@@ -24,11 +24,11 @@ mongoose.connect(MONGODB_URI).then(() => {
   });
 
 // Middleware to remove `/api` prefix
-app.use('*', (req, res, next) => {
-  console.log("hello" , req.url)
-  // req.url = req.url.replace(/^\/api/, '');
-  next();
-}); 
+// app.use('*', (req, res, next) => {
+//   console.log("hello" , req.url)
+//   // req.url = req.url.replace(/^\/api/, '');
+//   next();
+// }); 
 
 app.use("/user",userRoute)
 app.use("/message",messageRoute)
